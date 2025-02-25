@@ -86,12 +86,26 @@ JavaScript สามารถเพิ่มลงในเว็บเพจไ
     <button onclick="alert('ชื่อนักศึกษาคือ Krittinat Samrankit')">ปุ่มที่ 1 </button>
     <button id="btn2">ปุ่มที่ 2 </button>
     <button id="btn3">ปุ่มที่ 3 </button>
+    <input type="text" id="textBox" placeholder="พิมพ์ข้อความที่นี่">
+    <button onclick="showText()">แสดงข้อความ</button>
+    
+    <p id="output"></p>
+
 
     <script>
         document.getElementById('btn2').onclick = function() {
             let currentDate = new Date();
             alert('วันที่ปัจจุบัน: ' + currentDate.toLocaleDateString());
         };
+        function showText() {
+            let text = document.getElementById('textBox').value;
+            document.getElementById('output').innerText = text;
+        }
+        document.getElementById('btn3').onclick = function() {
+            let currentTime = new Date();
+            alert('เวลาปัจจุบัน: ' + currentTime.toLocaleTimeString());
+        };
+
     </script>
 
     <script src="script.js"></script>
@@ -99,7 +113,9 @@ JavaScript สามารถเพิ่มลงในเว็บเพจไ
 </html>
 
 ```
-[รูปผลการทดลองที่ 1]
+![1](https://github.com/user-attachments/assets/6824bbff-cee7-460d-9339-8790f0bcf94c)
+
+
   
 ## การทดลองที่ 2: พื้นฐาน JavaScript
 ### 2.1 การประกาศตัวแปรและชนิดข้อมูล
